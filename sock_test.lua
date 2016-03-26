@@ -1,0 +1,7 @@
+sock = net.createConnection(net.TCP, 0)
+sock:connect(7777, "192.168.2.108")
+--sock:on("connection", function(sck,c)
+sock:send("TestMessage")
+--sock:on("receive", function(sck,c) print(c) end)
+--	end)
+sock:close()
